@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-07-23T13:57:32 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Employee" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fb26dd13-4f97-4d51-9274-8fb8382b4ceb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="EmployeeDataSet" uuid="6ab4299a-b56b-405c-b7de-d7e032f2a12c">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="basicAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[basicAmount]]></fieldDescription>
+	</field>
+	<field name="billDate" class="java.util.Date">
+		<fieldDescription><![CDATA[billDate]]></fieldDescription>
+	</field>
+	<field name="billItems" class="java.util.List">
+		<fieldDescription><![CDATA[billItems]]></fieldDescription>
+	</field>
+	<field name="customerName" class="java.lang.String">
+		<fieldDescription><![CDATA[customerName]]></fieldDescription>
+	</field>
+	<field name="godownNo" class="java.lang.String">
+		<fieldDescription><![CDATA[godownNo]]></fieldDescription>
+	</field>
+	<field name="vatAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[vatAmount]]></fieldDescription>
+	</field>
+	<field name="paymentType" class="java.lang.String">
+		<fieldDescription><![CDATA[paymentType]]></fieldDescription>
+	</field>
+	<field name="billAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[billAmount]]></fieldDescription>
+	</field>
+	<field name="dueAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[dueAmount]]></fieldDescription>
+	</field>
+	<field name="customerId" class="java.lang.String">
+		<fieldDescription><![CDATA[customerId]]></fieldDescription>
+	</field>
+	<field name="customerDetails" class="java.lang.String">
+		<fieldDescription><![CDATA[customerDetails]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="paidAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[paidAmount]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="31" forecolor="#FFFFFF" backcolor="#64B6F5" uuid="93781cc2-54b9-4040-b28b-2fb867f6a1d3">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="23" isBold="true"/>
+				</textElement>
+				<text><![CDATA[List of Employee]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="7" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="95" splitType="Stretch">
+			<subreport>
+				<reportElement x="279" y="30" width="275" height="49" uuid="0ba8ea2b-1b64-49dc-950c-23a3896c82bb"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{billItems})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["salary.jasper"]]></subreportExpression>
+			</subreport>
+			<textField>
+				<reportElement x="0" y="8" width="141" height="30" uuid="b08933bc-ee40-4896-8d5f-5dc6d911dbb1"/>
+				<textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="8" width="138" height="30" uuid="c9a20501-eb37-4fd0-b4f2-dbb6b8eaa003"/>
+				<textFieldExpression><![CDATA[$F{godownNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="8" width="138" height="30" uuid="c2209fef-385c-40ef-a332-80c28ae104c4"/>
+				<textFieldExpression><![CDATA[$F{customerId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="8" width="138" height="30" uuid="4315b141-5e0a-4fcb-ba7e-3580c0215086"/>
+				<textFieldExpression><![CDATA[$F{customerDetails}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="29" splitType="Stretch"/>
+	</summary>
+</jasperReport>

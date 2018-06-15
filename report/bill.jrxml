@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-07-23T13:52:50 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="bill" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9efa23e7-9ea6-441d-97b6-069dea18811b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Bean"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="basicAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[basicAmount]]></fieldDescription>
+	</field>
+	<field name="billDate" class="java.util.Date">
+		<fieldDescription><![CDATA[billDate]]></fieldDescription>
+	</field>
+	<field name="billItems" class="java.util.List">
+		<fieldDescription><![CDATA[billItems]]></fieldDescription>
+	</field>
+	<field name="customerName" class="java.lang.String">
+		<fieldDescription><![CDATA[customerName]]></fieldDescription>
+	</field>
+	<field name="godownNo" class="java.lang.String">
+		<fieldDescription><![CDATA[godownNo]]></fieldDescription>
+	</field>
+	<field name="vatAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[vatAmount]]></fieldDescription>
+	</field>
+	<field name="paymentType" class="java.lang.String">
+		<fieldDescription><![CDATA[paymentType]]></fieldDescription>
+	</field>
+	<field name="billAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[billAmount]]></fieldDescription>
+	</field>
+	<field name="dueAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[dueAmount]]></fieldDescription>
+	</field>
+	<field name="customerId" class="java.lang.String">
+		<fieldDescription><![CDATA[customerId]]></fieldDescription>
+	</field>
+	<field name="customerDetails" class="java.lang.String">
+		<fieldDescription><![CDATA[customerDetails]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="paidAmount" class="java.lang.Double">
+		<fieldDescription><![CDATA[paidAmount]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="30" uuid="dc31585a-89d5-4d24-a997-2fa2b95eec5a"/>
+				<textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="309" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="80" width="100" height="30" uuid="f3208652-50dd-4363-a3d4-7c9d3ab3a351"/>
+				<textFieldExpression><![CDATA[$F{customerName}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="245" y="109" width="200" height="200" uuid="4705b798-8c7f-41eb-9b9b-7f099a651988"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{billItems})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["billitem.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2016-07-23T13:34:21 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="billitem" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="66b80284-a33f-4fc4-89e5-7b20d8bf84f9">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="quantity" class="java.math.BigInteger">
+		<fieldDescription><![CDATA[quantity]]></fieldDescription>
+	</field>
+	<field name="productId" class="java.lang.String">
+		<fieldDescription><![CDATA[productId]]></fieldDescription>
+	</field>
+	<field name="totalPrice" class="java.lang.Double">
+		<fieldDescription><![CDATA[totalPrice]]></fieldDescription>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<fieldDescription><![CDATA[price]]></fieldDescription>
+	</field>
+	<field name="pdesc" class="java.lang.String">
+		<fieldDescription><![CDATA[pdesc]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="mfgDate" class="java.lang.String">
+		<fieldDescription><![CDATA[mfgDate]]></fieldDescription>
+	</field>
+	<field name="sellvat" class="java.lang.Double">
+		<fieldDescription><![CDATA[sellvat]]></fieldDescription>
+	</field>
+	<field name="expDate" class="java.lang.String">
+		<fieldDescription><![CDATA[expDate]]></fieldDescription>
+	</field>
+	<field name="productName" class="java.lang.String">
+		<fieldDescription><![CDATA[productName]]></fieldDescription>
+	</field>
+	<field name="batchNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[batchNumber]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" uuid="a0008474-9e41-41da-9116-833e2fa6193d"/>
+				<text><![CDATA[totalPrice]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="0" width="111" height="30" uuid="d27f0aa7-9a03-4238-b962-ba25188b4c72"/>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="0" width="111" height="30" uuid="d425434c-fdd2-4ee2-bd60-01226991f2dd"/>
+				<text><![CDATA[pdesc]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="0" width="111" height="30" uuid="596cdfee-d6f2-41b5-93c4-d72c921af663"/>
+				<text><![CDATA[mfgDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="0" width="111" height="30" uuid="02de7581-14fc-4e71-9acd-27069a26e413"/>
+				<text><![CDATA[sellvat]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="28" width="111" height="30" uuid="b336f39d-408f-4a56-a302-7d752b63603f"/>
+				<textFieldExpression><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="28" width="111" height="30" uuid="5aeb4139-669c-421c-8bb6-b82f20682851"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="28" width="111" height="30" uuid="051b7a9e-d084-4af9-8d06-e94b859b0a80"/>
+				<textFieldExpression><![CDATA[$F{pdesc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="28" width="111" height="30" uuid="ba91d490-d78a-41e6-9a03-6daa25dc4374"/>
+				<textFieldExpression><![CDATA[$F{mfgDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="28" width="111" height="30" uuid="f4797a3f-85fe-41ef-94ad-433e832aa15d"/>
+				<textFieldExpression><![CDATA[$F{sellvat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
